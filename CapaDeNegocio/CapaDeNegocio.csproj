@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6D866EB1-E57F-4DA8-8C1C-ACBC0D3C85F1}</ProjectGuid>
+    <ProjectGuid>{6046D115-CD77-4835-83AB-C4725E51BC18}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CapaDeDatos</RootNamespace>
-    <AssemblyName>CapaDeDatos</AssemblyName>
+    <RootNamespace>CapaDeNegocio</RootNamespace>
+    <AssemblyName>CapaDeNegocio</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,7 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,11 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CD_Usuarios.cs" />
-    <Compile Include="Conexion.cs" />
+    <Compile Include="CN_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDeDatos\CapaDeDatos.csproj">
+      <Project>{6d866eb1-e57f-4da8-8c1c-acbc0d3c85f1}</Project>
+      <Name>CapaDeDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaDeEntidad\CapaDeEntidad.csproj">
       <Project>{84582b91-8a72-4d09-b1f2-f367804bf277}</Project>
       <Name>CapaDeEntidad</Name>
